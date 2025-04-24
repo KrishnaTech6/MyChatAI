@@ -59,7 +59,39 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
+    //compose navigation
+    implementation(libs.androidx.navigation.compose)
+    implementation (libs.androidx.ui.viewbinding)
+    implementation (libs.androidx.lifecycle.viewmodel.compose)
+
+    // system bars
+    implementation(libs.accompanist.systemuicontroller)
+
     // hilt
-    implementation("com.google.dagger:hilt-android:2.56.1")
-    ksp("com.google.dagger:hilt-android-compiler:2.56.1")
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.android.compiler)
+    implementation(libs.androidx.hilt.navigation.compose)
+
+    //Networking
+    implementation (libs.retrofit)
+    implementation (libs.converter.gson)
+    implementation (libs.okhttp)
+    implementation (libs.logging.interceptor)
+
+    // gson & coroutines
+    implementation (libs.gson)
+    implementation (libs.kotlinx.coroutines.android)
+
+    //Richtext Library
+    implementation (libs.richtext.commonmark)
+    implementation (libs.richtext.ui.material)
+    implementation (libs.richtext.ui.material3)
+
+    //coil
+    implementation(libs.coil.compose)
+
+    // Firebase
+    implementation(platform("com.google.firebase:firebase-bom:33.12.0"))
+    implementation ("com.google.firebase:firebase-analytics-ktx")
+    implementation ("com.google.firebase:firebase-firestore-ktx")
 }
